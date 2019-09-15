@@ -1,5 +1,7 @@
 import React from 'react';
 import Sidebar from './components/sidebar/App';
+import Topbar from './components/topbar/App';
+import Footer from './components/footer/App';
 
 function App() {
   return (
@@ -9,11 +11,14 @@ function App() {
     </aside>
     <div class="h-100 w-100">
       <header class="w-100 bg-secondary">
-         header
+         <Topbar></Topbar>
       </header>
       <main class="bg-danger h-100 w-100">
         main
       </main>
+      <footer>
+    <Footer></Footer>
+      </footer>
     </div>
   </div>
   );

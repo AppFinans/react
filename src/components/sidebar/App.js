@@ -32,7 +32,7 @@ export default function App ( props ) {
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Movimentação Financeira</h6>
-            <a class="collapse-item" href="lancamentos.html">Inserir Lancamentos</a>
+            <a class="collapse-item" Link to="lancamentos.html">Inserir Lancamentos</a>
             <a class="collapse-item" href="consulta_lancamentos.html">Consultar Lançamentos</a>
             <a class="collapse-item" href="caixas.html">Inserir Caixas</a>
             <a class="collapse-item" href="consulta_caixas.html">Consultar Caixas</a>
