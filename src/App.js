@@ -1,7 +1,7 @@
 import React from 'react';
 import Sidebar from './components/sidebar/App';
 import Topbar from './components/topbar/App';
-import Footer from './components/footer/App';
+import CopyRight from './components/copyright/App';
 import Home from './components/home/App';
 import Caixas from './components/caixas/App';
 import Lancamentos  from './components/lancamentos/App';
@@ -13,33 +13,52 @@ import {
   Switch
 } from "react-router-dom";
 
+function adjustMain () {
+  let aside = document.querySelector( "aside" );
+  let footer = document.querySelector( "footer" );
+  let header = document.querySelector( "header" );
+  let main = document.querySelector( "main" );
+  if ( aside && footer && header && main ) {
+    console.log( main.clientHeight )
+    main.clientHeight = aside.clientHeight - footer.clientHeight - header.clientHeight
+    console.log( main.clientHeight )
+  }
+}
 
 function App() {
   return (
     <BrowserRouter>
-      <div class="d-flex h-100 w-100">
-        <aside class="mw-25 bg-primary h-100">
+      <div className="d-flex h-100 w-100">
+        <aside className="mw-25 bg-primary h-100">
             <Sidebar></Sidebar> 
         </aside>
-      <div class="h-100 w-100">
-        <header class="w-100 bg-secondary">
-          <Topbar></Topbar>
-        </header>
-        <main class="bg-danger h-100 w-100">
-          
-          <Switch>
-            <Route path="/" exact component= {Home} />
-            <Route path="/lancamentos" component ={Lancamentos} />
-            <Route path="/caixas" exact component= {Caixas} />
-            <Route path="/subcontas" exact component= {SubContas} />
-            <Route component={ Error } />
-          </Switch>
-          
-        </main>
-        <Footer></Footer>
+        <div
+          className="w-100 h-100"
+        >
+          <header className="w-100">
+            <Topbar></Topbar>
+          </header>
+          <main
+            className="w-100"
+          >
+
+            <Switch>
+              <Route path="/" exact component={Home} />
+              <Route path="/inserir-lancamento" component={Lancamentos} />
+              <Route path="/inserir-caixa" exact component={Caixas} />
+              <Route path="/subcontas" exact component={SubContas} />
+              <Route component={ Error } />
+            </Switch>
+            
+          </main>
+          <footer
+            className="bg-white w-100 p-4 border-top"
+          >
+            <CopyRight />
+          </footer>
+        </div>
       </div>
-    </div>
-  </BrowserRouter>
+    </BrowserRouter>
   );
 }
 

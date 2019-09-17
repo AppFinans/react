@@ -5,109 +5,10 @@ import Dropdown from '../dropdown/App';
 import {
   Link
 } from 'react-router-dom';
-
-const navigation = [
-  {
-    title: "geral",
-    menus: [
-      {
-        title: "Financeiro",
-        icon: "fas fa-fw fa-dollar-sign",
-        submenus: [
-          {
-            title: "Movimentação Financeira",
-            items: [
-              {
-                label: "Inserir Lançamento",
-                url: "/inserir-lancamento"
-              },
-              {
-                label: "Consultar Lançamentos",
-                url: "/consultar-lancamentos"
-              },
-              {
-                label: "Inserir Caixa",
-                url: "/inserir-caixa"
-              },
-              {
-                label: "Consultar Caixas",
-                url: "/consultar-caixas"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        title: "Consultas",
-        icon: "fas fa-fw fa-list",
-        submenus: [
-          {
-            title: "Consultas Gerais",
-            items: [
-              {
-                label: "Visão Geral",
-                url: "/visao-geral"
-              },
-              {
-                label: "Balancete",
-                url: "/balancete"
-              },
-              {
-                label: "Análise Financeira",
-                url: "/analise-fincanceira"
-              },
-              {
-                label: "Extrato",
-                url: "/extrato"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    title: "cadastros",
-    menus: [
-      {
-        title: "Cadastros Gerais",
-        icon: "fas fa-folder-plus",
-        submenus: [
-          {
-            title: "Dados Bancários",
-            items: [
-              {
-                label: "Contas Bancárias",
-                url: "/contas-bancarias"
-              },
-              {
-                label: "Plano de Contas",
-                url: "/plano-de-contas"
-              },
-              {
-                label: "Sub Contas",
-                url: "/sub-contas"
-              }
-            ]
-          },
-          {
-            title: "Cadastro de Histórico",
-            items: [
-              {
-                label: "Histórico Padrão",
-                url: "/historico-padrao"
-              },
-              {
-                label: "Beneficiários",
-                url: "/beneficiarios"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-]
+import {
+  navigation
+} from '../../settings';
+import Logo from '../logo/App';
 
 export default function App ( props ) {
   return (
@@ -116,11 +17,9 @@ export default function App ( props ) {
         className="sidebar-brand d-flex align-items-center justify-content-center"
         to="/"
       >
-        <div className="sidebar-brand-icon">
-          <img src="img/logo1.png" className="mw-100" alt="Finans"/>
-        </div>
-        <div className="sidebar-brand-text mx-3"></div>
+        <Logo className="sidebar-brand-icon p-3" />
       </Link>
+      <div className="sidebar-brand-text mx-3"></div>
 
       <hr className="sidebar-divider"/>
      

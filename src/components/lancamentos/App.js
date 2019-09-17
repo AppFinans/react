@@ -23,7 +23,7 @@ export default function App ( props ) {
 
 
                     <div class="col-12 d-flex">
-                      <div class="d-flex flex-column flex-sm-row border rounded p-2 m-auto" style="max-width: 320px;">
+                      <div class="d-flex flex-column flex-sm-row border rounded p-2 m-auto mw-xs">
                         <label class="m-3">
                           <input type="radio" name="tipo" value="receita" />
                           <span class="text-success mx-1 text-uppercase">
