@@ -10,12 +10,12 @@ export default function App ( props ) {
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <Link className="sidebar-brand d-flex align-items-center justify-content-center" to="/home">
         <div class="sidebar-brand-icon">
           <img src="img/logo1.png" class="mw-100" alt="Finans"/>
         </div>
         <div class="sidebar-brand-text mx-3"></div>
-      </a>
+      </Link>
 
       
       
@@ -28,16 +28,16 @@ export default function App ( props ) {
 
       
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <button className="nav-link collapsed" to="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-dollar-sign"></i>
           <span>Financeiro</span>
-        </a>
+        </button>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Movimentação Financeira</h6>
-            <Link className="collapse-item" to="/lancamentos">Inserir Lancamentos</Link>
+            <Link className="collapse-item" to="lancamentos">Inserir Lancamentos</Link>
             <Link className="collapse-item" to="/consulta_lancamentos">Consultar Lançamentos</Link>
-            <Link className="collapse-item" to="/caixas">Inserir Caixas</Link>
+            <Link className="collapse-item" to="caixas">Inserir Caixas</Link>
             <Link className="collapse-item" to="/consulta_caixas">Consultar Caixas</Link>
           </div>
         </div>
@@ -45,10 +45,10 @@ export default function App ( props ) {
 
       
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+        <button className="nav-link collapsed" to="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-search"></i>
           <span>Consultas</span>
-        </a>
+        </button>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Consultas gerais</h6>
@@ -70,23 +70,23 @@ export default function App ( props ) {
 
       
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-          <i class="fas fa-fw fa-folder-plus"></i>
-          <span>Cadastro Gerais</span>
-        </a>
+        <button className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+            <i class="fas fa-fw fa-folder-plus"></i>
+            <span>Cadastro Gerais</span>
+        </button>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Dados Bancários</h6>
-            <Link className="collapse-item" to="/conta_bancaria">Contas Bancárias</Link>
-            <Link className="collapse-item" to="/plano_de_contas">Plano de Contas</Link>
-            <Link className="collapse-item" to="/sub_contas">Sub Contas</Link>
-            <div class="collapse-divider"></div>
-            <h6 class="collapse-header">Cadastro de Histórico</h6>
-            <Link className="collapse-item" to="/404">Histórico Padrão</Link>
-            <Link className="collapse-item" to="/404">Beneficiários</Link>
-          </div>
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Dados Bancários</h6>
+                <Link className="collapse-item" to="/conta_bancaria">Contas Bancárias</Link>
+                <Link className="collapse-item" to="/plcontas">Plano de Contas</Link>
+                <Link className="collapse-item" to="/subcontas">Sub Contas</Link>
+                <div class="collapse-divider"></div>
+                <h6 class="collapse-header">Cadastro de Histórico</h6>
+                <Link className="collapse-item" to="/404">Histórico Padrão</Link>
+                <Link className="collapse-item" to="/404">Beneficiários</Link>
+            </div>
         </div>
-      </li>
+     </li>
 
       
       <hr class="sidebar-divider"/>
@@ -104,9 +104,9 @@ export default function App ( props ) {
       </li>
 
       
-      <li class="nav-item">
-        <Link className="nav-link" to="/suporte">
-          <i class="fas fa-fw fa-question-circle"></i>
+      <li className="nav-item">
+        <Link className="nav-link" to="/404">
+          <i className="fas fa-fw fa-question-circle"/ >
           <span>Suporte</span></Link>
       </li>
 
@@ -121,3 +121,4 @@ export default function App ( props ) {
     </ul>
 );
 }
+
