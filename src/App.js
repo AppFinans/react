@@ -17,28 +17,28 @@ import {
 function App() {
   return (
     <BrowserRouter>
-    <div class="d-flex h-100 w-100">
-    <aside class="mw-25 bg-primary h-100">
-         <Sidebar></Sidebar> 
-    </aside>
-    <div class="h-100 w-100">
-      <header class="w-100 bg-secondary">
-         <Topbar></Topbar>
-      </header>
-      <main class="bg-danger h-100 w-100">
-        
-        <Switch>
-        <Route path="/home" exact component= {Home} />
-        <Route path="/lancamentos" component ={Lancamentos} />
-        <Route path="/caixas" exact component= {Caixas} />
-        <Route path="/subcontas" exact component= {SubContas} />
-        <Route path="/error" exact component= {Error} />  
-        </Switch>
-        
-      </main>
-    <Footer></Footer>
+      <div class="d-flex h-100 w-100">
+        <aside class="mw-25 bg-primary h-100">
+            <Sidebar></Sidebar> 
+        </aside>
+      <div class="h-100 w-100">
+        <header class="w-100 bg-secondary">
+          <Topbar></Topbar>
+        </header>
+        <main class="bg-danger h-100 w-100">
+          
+          <Switch>
+            <Route path="/" exact component= {Home} />
+            <Route path="/lancamentos" component ={Lancamentos} />
+            <Route path="/caixas" exact component= {Caixas} />
+            <Route path="/subcontas" exact component= {SubContas} />
+            <Route component={ Error } />
+          </Switch>
+          
+        </main>
+        <Footer></Footer>
+      </div>
     </div>
-  </div>
   </BrowserRouter>
   );
 }
