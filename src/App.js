@@ -2,6 +2,15 @@ import React from 'react';
 import Sidebar from './components/sidebar/App';
 import Topbar from './components/topbar/App';
 import Footer from './components/footer/App';
+import Home from './components/home/App';
+import Caixas from './components/caixas/App';
+import Lancamentos  from './components/lancamentos/App';
+import SubContas from './components/subcontas/App';
+import {
+  Route,
+  Switch
+} from "react-router-dom";
+
 
 function App() {
   return (
@@ -14,7 +23,13 @@ function App() {
          <Topbar></Topbar>
       </header>
       <main class="bg-danger h-100 w-100">
-        main
+        <Switch>
+        <Route path="/home" exact component= {Home} />
+        <Route path="/lancamentos" exact component= {Lancamentos} />
+        <Route path="/caixas" exact component= {Caixas} />
+        <Route path="/subcontas" exact component= {SubContas} />
+          
+        </Switch>
       </main>
       <footer>
     <Footer></Footer>

@@ -1,4 +1,7 @@
 import React from 'react';
+import {
+  Link
+} from 'react-router-dom';
 
 export default function App ( props ) {
     return (
@@ -32,10 +35,10 @@ export default function App ( props ) {
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Movimentação Financeira</h6>
-            <a class="collapse-item" Link to="lancamentos.html">Inserir Lancamentos</a>
-            <a class="collapse-item" href="consulta_lancamentos.html">Consultar Lançamentos</a>
-            <a class="collapse-item" href="caixas.html">Inserir Caixas</a>
-            <a class="collapse-item" href="consulta_caixas.html">Consultar Caixas</a>
+            <Link className="collapse-item" to="/lancamentos">Inserir Lancamentos</Link>
+            <Link className="collapse-item" to="/consulta_lancamentos">Consultar Lançamentos</Link>
+            <Link className="collapse-item" to="/caixas">Inserir Caixas</Link>
+            <Link className="collapse-item" to="/consulta_caixas">Consultar Caixas</Link>
           </div>
         </div>
       </li>
@@ -49,10 +52,10 @@ export default function App ( props ) {
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Consultas gerais</h6>
-            <a class="collapse-item" href="index.html">Visão Geral</a>
-            <a class="collapse-item" href="balancete.html">Balancete</a>
-            <a class="collapse-item" href="analise_financeira.html">Analise Financeira</a>
-            <a class="collapse-item" href="extrato.html">Extrato</a>
+            <Link className="collapse-item" to="/visao_geral">Visão Geral</Link>
+            <Link className="collapse-item" to="/balancete">Balancete</Link>
+            <Link className="collapse-item" to="/analise_financeira">Analise Financeira</Link>
+            <Link className="collapse-item" to="/extrato.html">Extrato</Link>
           </div>
         </div>
       </li>
@@ -74,13 +77,13 @@ export default function App ( props ) {
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Dados Bancários</h6>
-            <a class="collapse-item" href="conta_bancaria.html">Contas Bancárias</a>
-            <a class="collapse-item" href="plano_de_contas.html">Plano de Contas</a>
-            <a class="collapse-item" href="sub_contas.html">Sub Contas</a>
+            <Link className="collapse-item" to="/conta_bancaria">Contas Bancárias</Link>
+            <Link className="collapse-item" to="/plano_de_contas">Plano de Contas</Link>
+            <Link className="collapse-item" to="/sub_contas">Sub Contas</Link>
             <div class="collapse-divider"></div>
             <h6 class="collapse-header">Cadastro de Histórico</h6>
-            <a class="collapse-item" href="404.html">Histórico Padrão</a>
-            <a class="collapse-item" href="404.html">Beneficiários</a>
+            <Link className="collapse-item" to="/404">Histórico Padrão</Link>
+            <Link className="collapse-item" to="/404">Beneficiários</Link>
           </div>
         </div>
       </li>
@@ -95,16 +98,16 @@ export default function App ( props ) {
 
       
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <Link className="nav-link" to="/mudanca_senha">
           <i class="fas fa-fw fa-key"></i>
-          <span>Mudança de Senha</span></a>
+          <span>Mudança de Senha</span></Link>
       </li>
 
       
       <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <Link className="nav-link" to="/suporte">
           <i class="fas fa-fw fa-question-circle"></i>
-          <span>Suporte</span></a>
+          <span>Suporte</span></Link>
       </li>
 
       
