@@ -6,6 +6,10 @@ import Home from './components/home/App';
 import Caixas from './components/caixas/App';
 import Lancamentos  from './components/lancamentos/App';
 import SubContas from './components/subcontas/App';
+import PlContas from './components/plcontas/App';
+import Suporte from './components/suporte/App';
+import ContaBancaria from './components/contabancaria/App';
+import VisaoGeral from './components/visaogeral/App';
 import Error from './components/error/App';
 import {
   BrowserRouter,
@@ -46,7 +50,11 @@ function App() {
               <Route path="/" exact component={Home} />
               <Route path="/inserir-lancamento" component={Lancamentos} />
               <Route path="/inserir-caixa" exact component={Caixas} />
-              <Route path="/subcontas" exact component={SubContas} />
+              <Route path="/visao-geral" exact component={VisaoGeral} />
+              <Route path="/sub-contas" exact component={SubContas} />
+              <Route path="/plano-de-contas" exact component={PlContas} />
+              <Route path="/contas-bancarias" exact component={ContaBancaria} />
+              <Route path="/suporte" exact component={Suporte} />
               <Route component={ Error } />
             </Switch>
             

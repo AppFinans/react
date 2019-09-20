@@ -3,18 +3,18 @@ import React from 'react';
 export default function App ( props ) {
     return (
 
-      <div class="container mw-sm">
+      <div className="container mw-sm">
 
-        <div class="d-sm-flex align-items-center justify-content-between mb-4">
-          <h1 class="h3 mb-0 text-gray-800"></h1>
+        <div className="d-sm-flex align-items-center justify-content-between mb-4">
+          <h1 className="h3 mb-0 text-gray-800"></h1>
         </div>
 
         
-        <div class="row"> -->
-            <div class="container">
-                <div class="row">
-                  <div class="col-12 mb-5">
-                    <h1 class="display-sm-4">
+        <div className="row">
+            <div className="container">
+                <div className="row">
+                  <div className="col-12 mb-5">
+                    <h1 className="display-sm-4">
                       <small>
                         Sub Conta
                       </small>
@@ -23,20 +23,20 @@ export default function App ( props ) {
                 </div>
 
                 <form
-                  class="row"
+                  className="row"
                   action=""
                   method="POST"
                 >
 
                   
-                <div class="col-12">
-                  <label class="my-2 d-block">
+                <div className="col-12">
+                  <label className="my-2 d-block">
                     <small>
                       Plano de Conta
                     </small>
                     <select
                       name="conta"
-                      class="form-control"
+                      className="form-control"
                     >
                       <option selected>Selecione o tipo:</option>
                       <option value="000000">Dinheiro</option>
@@ -48,46 +48,46 @@ export default function App ( props ) {
                   
 
                                       
-                  <div class="col-12 col-sm-6">
-                      <label class="my-2 d-block">
+                  <div className="col-12 col-sm-6">
+                      <label className="my-2 d-block">
                         <small>
                           Numero 
                         </small>
-                        <input type="text" name="doc" class="form-control" />
+                        <input type="text" name="doc" className="form-control" />
                       </label>
                   </div>
 
                   
 
-                  <div class="col-12 col-sm-6">
-                      <label class="my-2 d-block">
+                  <div className="col-12 col-sm-6">
+                      <label className="my-2 d-block">
                         <small>
                           Descrição 
                         </small>
-                        <input type="text" name="beneficiario" class="form-control" />
+                        <input type="text" name="beneficiario" className="form-control" />
                       </label>
                   </div>
 
                   
                   
-                  <div class="col-12 d-flex">
-                    <div class="my-auto p-3">
-                      <button class="btn btn-success d-flex btn-block">
-                        <span class="m-auto">
+                  <div className="col-12 d-flex">
+                    <div className="my-auto p-3">
+                      <button className="btn btn-success d-flex btn-block">
+                        <span className="m-auto">
                           Salvar
                         </span>
-                        <span class="pl-1 m-auto">
-                          <i class="fas fa-check"></i>
+                        <span className="pl-1 m-auto">
+                          <i className="fas fa-check"></i>
                         </span>
                       </button>
                     </div>
-                    <div class="my-auto p-3">
-                      <button class="btn btn-danger d-flex btn-block">
-                        <span class="m-auto">
+                    <div className="my-auto p-3">
+                      <button className="btn btn-danger d-flex btn-block">
+                        <span className="m-auto">
                           Cancelar
                         </span>
-                        <span class="pl-1 m-auto">
-                          <i class="fas fa-times"></i>
+                        <span className="pl-1 m-auto">
+                          <i className="fas fa-times"></i>
                         </span>
                       </button>
                     </div>
@@ -99,7 +99,7 @@ export default function App ( props ) {
           
           </div> 
 
-        <div class="col-lg-6 mb-4">
+        <div className="col-lg-6 mb-4">
 
         </div>
     </div>

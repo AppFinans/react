@@ -128,7 +128,7 @@ export default function App ( props ) {
                         </label>
                     </div>
 
-                    <div class="col-12 col-sm-6">
+                    <div class="col-12 col-sm-3">
                         <label class="my-2 d-block">
                           <small>
                             Data
@@ -137,7 +137,7 @@ export default function App ( props ) {
                         </label>
                     </div>
 
-                    <div class="col-12 col-sm-6">
+                    <div class="col-12 col-sm-3">
                         <label class="my-2 d-block">
                           <small>
                             Valor
